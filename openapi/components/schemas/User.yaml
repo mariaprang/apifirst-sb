@@ -25,12 +25,6 @@ properties:
     type: string
     minLength: 1
     example: Rabbit
-  email:
-    $ref: './Email.yaml'
-  exampleObject:
-    description: "Example object to show an expanded schema."
-    allOf:
-      - $ref: './ExampleObject.yaml'
   phone:
     description: "User's phone number. Must be provided in international format."
     type: string
@@ -61,12 +55,5 @@ properties:
         - active
         - banned
         - inactive
-  userid:
-    description: "Unique ID of the user."
-    externalDocs:
-      description: Example of external documentation link
-      url: 'https://example.com'
-    allOf:
-      - $ref: './UserID.yaml'
 xml:
   name: User
