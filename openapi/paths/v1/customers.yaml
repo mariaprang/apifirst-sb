@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Customer
+  summary: List all customers
+  description: Returns all customers from the system that the user has access to
+  operationId: listCustomers
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/v1/customer-list.yaml"
+    '404':
+      description: No customers found
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/Problem.yaml"

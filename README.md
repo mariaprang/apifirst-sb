@@ -206,12 +206,12 @@ get:
           schema:
             type: array
             items:
-              $ref: ../components/schemas/Customer.yaml
+              $ref: ../components/schemas/customer-list.yaml
         text/csv:
           schema:
             type: array
             items:
-              $ref: ../components/schemas/Customer.yaml
+              $ref: ../components/schemas/customer-list.yaml
     '401':
       $ref: ../components/responses/AccessForbidden.yaml
   x-code-samples:
@@ -225,10 +225,10 @@ post:
   operationId: PostCustomer
   description: Another markdown description here.
   requestBody:
-    $ref: ../components/requestBodies/Customer.yaml
+    $ref: ../components/requestBodies/customer-list.yaml
   responses:
     '201':
-      $ref: ../components/responses/Customer.yaml
+      $ref: ../components/responses/customer-list.yaml
     '401':
       $ref: ../components/responses/AccessForbidden.yaml
     '409':
