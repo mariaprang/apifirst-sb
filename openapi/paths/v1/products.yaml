@@ -11,9 +11,9 @@ get:
         application/json:
           schema:
             $ref: "../../components/schemas/v1/product/product-list.yaml"
-        '404':
-          description: No customers found
-          content:
-            application/json:
-              schema:
-                $ref: "../../components/schemas/Problem.yaml"
+    '404':
+      description: No customers found
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/Problem.yaml"
