@@ -1,0 +1,24 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: "The unique identifier for an order"
+  product:
+    $ref: "../product/order-product.yaml"
+  order_quantity:
+    type: integer
+    description: "The quantity of the product in the order"
+  ship_quantity:
+    type: integer
+    description: "The quantity of the product shipped"
+  dateCreated:
+    type: string
+    format: date-time
+    description: "The date the payment method was created"
+  dateUpdated:
+    type: string
+    format: date-time
+    description: "The date the payment method was last updated"
+
+
