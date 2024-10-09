@@ -10,7 +10,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/v1/customer-list.yaml"
+            $ref: "../../components/schemas/v1/customer/customer-list.yaml"
     '404':
       description: No customers found
       content:
