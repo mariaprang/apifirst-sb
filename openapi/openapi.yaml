@@ -20,8 +20,8 @@ externalDocs:
   description: "Find out how to create a GitHub repo for your OpenAPI definition."
   url: 'https://github.com/Redocly/create-openapi-repo'
 tags:
-#  - name: Echo
-#    description: "Example echo operations."
+  #  - name: Echo
+  #    description: "Example echo operations."
   - name: Customer
     description: "Operations about customers."
   - name: User
@@ -40,12 +40,14 @@ servers:
       base-path:
         default: 'api/v1'
 paths:
-#  /users/{username}:
-#    $ref: 'paths/users_{username}.yaml'
+  #  /users/{username}:
+  #    $ref: 'paths/users_{username}.yaml'
   /v1/customers:
     $ref: 'paths/v1/customers.yaml'
+  /v1/customers/{customer_id}:
+    $ref: 'paths/v1/customers_{customer_id}.yaml'
 security:
-  - basic_auth: []
+  - basic_auth: [ ]
 components:
   securitySchemes:
     main_auth:
@@ -82,4 +84,4 @@ webhooks:
         '200':
           description: "Successfully retrieved information about a new user."
       security:
-        - api_key: []
+        - api_key: [ ]
