@@ -24,8 +24,8 @@ tags:
     description: "Operations about customers."
   - name: Products
     description: "Operations about products."
-  - name: User
-    description: "Example actions on user accounts."
+  - name: Order
+    description: "Operations about orders."
 servers:
   - url: "{protocol}://{host}:{port}/{base-path}"
     variables:
@@ -48,6 +48,10 @@ paths:
     $ref: 'paths/v1/products.yaml'
   /v1/products/{product_id}:
     $ref: 'paths/v1/products_{product_id}.yaml'
+  /v1/orders:
+    $ref: 'paths/v1/orders.yaml'
+  /v1/orders/{order_id}:
+    $ref: 'paths/v1/orders_{order_id}.yaml'
 security:
   - basic_auth: [ ]
 components:
