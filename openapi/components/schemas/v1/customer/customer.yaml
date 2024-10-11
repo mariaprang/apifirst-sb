@@ -5,16 +5,24 @@ properties:
     format: uuid
     description: "The unique identifier for a customer"
   name:
-    $ref: name.yaml
+    $ref: "../shared/name.yaml"
   shipToAddress:
-    $ref: address.yaml
+    $ref: "../shared/address.yaml"
   billToAddress:
-    $ref: address.yaml
+    $ref: "../shared/address.yaml"
   email:
     type: string
+    maxLength: 255
+    minLength: 3
   phone:
     type: string
+    maxLength: 15
+    minLength: 7
   paymentMethods:
     type: array
     items:
-    $ref: payment_method.yaml
+    $ref: "../shared/payment_method.yaml"
+required:
+  - name
+  - shipToAddress
+  - billToAddress
