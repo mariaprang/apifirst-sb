@@ -4,9 +4,14 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for a product category"
+    readOnly: true
   category:
     type: string
     description: "The name of the category"
+    readOnly: true
+    minLength: 3
+    maxLength: 50
+    example: "Electronics"
   description:
     type: string
     description: "The description of the category"
@@ -14,7 +19,12 @@ properties:
     type: string
     format: date-time
     description: "The date the category was created"
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
     description: "The date the category was last updated"
+    readOnly: true
+required:
+  - category
+  - description

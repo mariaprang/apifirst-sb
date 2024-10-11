@@ -4,17 +4,29 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for a product category"
+    readOnly: true
   url:
     type: string
     description: "The URL of the image"
+    minlength: 5
+    maxLength: 500
+    example: "https://example.com/image.jpg"
   altText:
-    type: string
+    type:
+      - string
+      - 'null'
     description: "The alt text of the image"
+    minlength: 3
+    maxLength: 255
   dateCreated:
     type: string
     format: date-time
     description: "The date the image was created"
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
     description: "The date the image was last updated"
+    readOnly: true
+required:
+  - url
