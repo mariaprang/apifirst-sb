@@ -4,6 +4,7 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for a customer"
+    readOnly: true
   name:
     $ref: "../shared/name.yaml"
   shipToAddress:
@@ -11,12 +12,14 @@ properties:
   billToAddress:
     $ref: "../shared/address.yaml"
   email:
-    type: string
+    type: [string, 'null']
     maxLength: 255
     minLength: 3
     example: "email@gmail.com"
   phone:
-    type: string
+    type:
+      - string
+      - 'null'
     maxLength: 15
     minLength: 7
     example: "123-456-7890"
@@ -24,6 +27,18 @@ properties:
     type: array
     items:
     $ref: "../shared/payment_method.yaml"
+  dateCreated:
+    type: string
+    format: date-time
+    description: "The date the payment method was created"
+    example: "2021-01-01T00:00:00Z"
+    readOnly: true
+  dateUpdated:
+    type: string
+    format: date-time
+    description: "The date the payment method was last updated"
+    example: "2021-01-01T00:00:00Z"
+    readOnly: true
 required:
   - name
   - shipToAddress

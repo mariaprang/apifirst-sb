@@ -4,6 +4,7 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for a customer"
+    readOnly: true
   addressLine1:
     type: string
     description: "The first line of the address"
@@ -11,7 +12,9 @@ properties:
     maxLength: 100
     example: "123 Main St."
   addressLine2:
-    type: string
+    type:
+      - string
+      - 'null'
     description: "The second line of the address"
     minLength: 3
     maxLength: 100
