@@ -9,6 +9,7 @@ properties:
     description: "The first line of the address"
     minLength: 3
     maxLength: 100
+    example: "123 Main St."
   addressLine2:
     type: string
     description: "The second line of the address"
@@ -19,16 +20,19 @@ properties:
     description: "The city of the address"
     minLength: 2
     maxLength: 100
+    example: "Anytown"
   state:
     type: string
     description: "2 character zip code"
     minLength: 2
     maxLength: 2
+    example: "NY"
   zipCode:
     type: string
     description: "The zip code of the address"
     minLength: 5
     maxLength: 10
+    example: "12345"
 required:
   - addressLine1
   - city

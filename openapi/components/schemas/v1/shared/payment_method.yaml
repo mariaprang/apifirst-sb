@@ -9,23 +9,30 @@ properties:
     description: "The display name of the payment method"
     minLength: 2
     maxLength: 100
+    example: "Visa"
   cardNumber:
     type: string
     description: "The card number of the payment method"
+    example: "5111111111111111"
   expiryMonth:
     type: integer
     description: "The expiry month of the payment method"
+    example: 12
   expiryYear:
     type: integer
     description: "The expiry year of the payment method"
+    example: 2022
   cvv:
     type: string
     description: "The CVV of the payment method"
+    example: "123"
   dateCreated:
     type: string
     format: date-time
     description: "The date the payment method was created"
+    example: "2021-01-01T00:00:00Z"
   dateUpdated:
     type: string
     format: date-time
     description: "The date the payment method was last updated"
+    example: "2021-01-01T00:00:00Z"
